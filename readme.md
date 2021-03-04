@@ -1,3 +1,10 @@
+Apple
+*   [Apple Developer Documentation Archive](https://developer.apple.com/library/archive/navigation/) -
+[**Programming with Objective-C**](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html)
+*   [Apple Developer Documentation](https://developer.apple.com/documentation/technologies) -
+[Foundation](https://developer.apple.com/documentation/foundation)
+
+Append `?language=occ` to `https://developer.apple.com/documentation/*`
 
 [GNUstep](http://www.gnustep.org/)
 *   [expdocs](http://www.gnustep.org/experience/documentation.html) - [mailinglist](http://www.gnustep.org/information/gethelp.html)
@@ -14,11 +21,11 @@
 [GitHub](https://github.com/gnustep)
 *   gnustep-make - [tools-make](https://github.com/gnustep/tools-make)
 *   gnustep-base -
-[Foundation](https://developer.apple.com/documentation/foundation)
-([wikipedia](https://en.wikipedia.org/wiki/Foundation_Kit))
+[Foundation Kit](https://en.wikipedia.org/wiki/Foundation_Kit) -
+[Foundation Framework](https://developer.apple.com/documentation/foundation)
 *   gnustep-gui -
-[AppKit](https://developer.apple.com/documentation/appkit)
-([wikipedia](https://en.wikipedia.org/wiki/Application_Kit))
+[Application Kit](https://en.wikipedia.org/wiki/Application_Kit) -
+[AppKit Framework](https://developer.apple.com/documentation/appkit)
 *   [gnustep-back](http://wiki.gnustep.org/index.php/Back) -
 [Backend](http://wiki.gnustep.org/index.php/Backend) -
 [GTK theme](https://github.com/gnustep/plugins-themes-Gtk)
@@ -34,3 +41,17 @@ https://cocoadev.github.io/ChooseYourOwnPrefix/
 source /usr/share/GNUstep/Makefiles/GNUstep.sh
 echo "$GNUSTEP_MAKEFILES"
 ```
+
+[obj method:argument];
+
+```plain
+$ nm ./obj/hello.obj/hello.m.o | grep msg
+                 U objc_msg_lookup
+```
+
+dynamic binding
+SEL - method identified by a selector - unique id for each message name - NUL-terminated string\
+IMP - method resolved to C method pointer implementing it
+
+class interface - header.h\
+class implementation - code.m

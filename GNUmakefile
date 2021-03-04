@@ -1,3 +1,7 @@
+# make print-gnustep-make-help
+# make clean all run
+# make messages=yes clean all run
+
 # Manual
 # https://stackoverflow.com/a/31680948/8243991
 # gcc `gnustep-config --objc-flags` *.m -lgnustep-base -lobjc
@@ -24,8 +28,19 @@ SYSTEM_INCLUDES:=$(SYSTEM_INCLUDES) -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/in
 # ALL_OBJCFLAGS:=$(ALL_OBJCFLAGS) -fobjc-runtime=gnustep-2.0
 
 TOOL_NAME:=hello
-hello_OBJC_FILES:=hello.m
+hello_OBJC_FILES:=hello.m LoremIpsum.m
 
 include $(GNUSTEP_MAKEFILES)/tool.make
+
+run: obj/$(TOOL_NAME)
+# 	@echo
+# 	@/bin/time -f "%E\n" ./obj/$(TOOL_NAME)
+	@./obj/$(TOOL_NAME)
+# 	@echo
+
+memcheck: obj/$(TOOL_NAME)
+# 	@echo
+	@valgrind -s ./obj/$(TOOL_NAME)
+# 	@echo
 
 # $(info *** ALL_OBJCFLAGS is $(ALL_OBJCFLAGS))
