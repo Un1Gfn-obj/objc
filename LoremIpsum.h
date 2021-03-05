@@ -21,14 +21,17 @@
 // t _i_LoremIpsum__getli
 
 // + classMethod0;
-+(const char*)getClassName;
+// +(const char*)getClassName;
++(void)classTest;
 +(int)subMinuend:(int)x Subtrahend:(int)y;
 +(int)addAddend1:(int)x Addend2:(int)y;
 +(int)inc:(int)n;
 
 // - instanceMethod0;
+-(void)instanceTest;
 -(LoremIpsum*)initWithVar:(int)v;
 -(LoremIpsum*)appendToVar:(int)a;
+-(int)getVar;
 -(void)showVar;
 // - (void)instanceMethod1With1Parameter:(int)param1_varName;
 // - (void)instanceMethod2With2Parameters:(int)param1_varName

@@ -19,10 +19,16 @@ Append `?language=occ` to `https://developer.apple.com/documentation/*`
 *   [architeture](http://wiki.gnustep.org/index.php/GNUstep_Suite)
 
 [GitHub](https://github.com/gnustep)
-*   gnustep-make - [tools-make](https://github.com/gnustep/tools-make)
+*   gnustep-make -
+[tools-make](https://github.com/gnustep/tools-make)
+*   gnustep-libobjc2 -
+[libobjc2](https://github.com/gnustep/libobjc2)
 *   gnustep-base -
 [Foundation Kit](https://en.wikipedia.org/wiki/Foundation_Kit) -
 [Foundation Framework](https://developer.apple.com/documentation/foundation)
+*   gnustep-corebase -
+[libs-corebase](https://github.com/gnustep/libs-corebase) -
+[Core Foundation](https://en.wikipedia.org/wiki/Core_Foundation)
 *   gnustep-gui -
 [Application Kit](https://en.wikipedia.org/wiki/Application_Kit) -
 [AppKit Framework](https://developer.apple.com/documentation/appkit)
@@ -55,3 +61,20 @@ IMP - method resolved to C method pointer implementing it
 
 class interface - header.h\
 class implementation - code.m
+
+NSObject +(instancetype)alloc
+1. allocate memory to hold instance variables
+1. zero out instance variables
+1. turn the memory into an instance of the class
+
+```objc
+NULL=(void \*)0;
+nil=(id)0;
+Nil=(Class)0;
+NSNull=[NSNull null];
+```
+
+[NS(Int)Number](https://developer.apple.com/documentation/foundation/nsnumber?language=objc)
+
+
+
